@@ -31,7 +31,9 @@ public class TestCatalon_app {
         String Currenturl = driver.getCurrentUrl();
         System.out.println("Url is:" + Currenturl);
         String MakeAppointment_Text = driver.findElement(By.tagName("h2")).getText();
+        System.out.println("Page heading is: " + MakeAppointment_Text);
         Assert.assertEquals(MakeAppointment_Text,"Make Appointment");
+        System.out.println("Heading assertion passed");
         driver.quit();
     }
 
