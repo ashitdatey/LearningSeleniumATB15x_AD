@@ -48,10 +48,7 @@ public class TestSelenium17_Mini_Project2_TagName {
 
         WebElement error_message = driver.findElement(By.className("invalid-reason"));
         Assert.assertEquals(error_message.getText(),"The email address you entered is incorrect.");
-
-
-
-
+        driver.quit();
 
 
 
