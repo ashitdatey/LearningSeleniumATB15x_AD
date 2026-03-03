@@ -3,12 +3,21 @@ package com.thetestingacademy.JavaAutoAssignments;
 //1. https://awesomeqa.com/hr/web/index.php
 //2. Login, Find the first Terminated Employye and click on the Delete
 //3. DOn’t Delete just open the popup and stop the scritp.
+import io.qameta.allure.Description;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
+import org.testng.annotations.Test;
+@Test
 public class OrangeHRMTableAssignment {
+    @Owner("Ashit")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Verify Terminated employee delete button")
+
     public static void main(String[] args) throws InterruptedException {
 
         WebDriver driver = new ChromeDriver();
