@@ -38,7 +38,7 @@ public class OrangeHRMTableAssignment {
         //div[@role="table"]/div[@class="oxd-table-body"]/div[@class="oxd-table-card"]
         //div[@class="orangehrm-container"]/div/div/div[@class="oxd-table-card"]
         //WebElement table = driver.findElement(By.xpath("//div[@class='orangehrm-container']"));
-        Integer Rows = driver.findElements(By.xpath("//div[@class='oxd-table-card']")).size();
+        Integer Rows = driver.findElements(By.xpath("//div[@class=\"oxd-table-card\"][1]/div/div[@role=\"cell\"]")).size();
         Integer Columns = driver.findElements(By.xpath("//div[@class='oxd-table-card'][1]/div/div[@role='cell']")).size();
 
         //Columns = //div[@class="oxd-table-card"][1]/div/div[@role="cell"];
@@ -60,6 +60,7 @@ public class OrangeHRMTableAssignment {
                 // Get First Name (column 3)
                 String firstNameXpath = first_part + i + second_part + 3 + third_part;
                 WebElement firstNameElement = driver.findElement(By.xpath(firstNameXpath));
+                System.out.println(firstNameElement.getText());
 //Delete button xpath: //div[@role="cell"][9]/div/button/i[contains(@class,'oxd-icon bi-trash')][1]
                 String deleteXpath = first_part + i + second_part + 9 + third_part + "//i[contains(@class,'bi-trash')]";
 
@@ -70,7 +71,7 @@ public class OrangeHRMTableAssignment {
 
 
             }
-       // driver.quit();
+                driver.quit();
         }
 
 
