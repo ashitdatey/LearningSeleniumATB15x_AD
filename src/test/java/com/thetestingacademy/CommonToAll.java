@@ -19,7 +19,8 @@ public class CommonToAll {
     }
 
 
-    public void closeBrowser(WebDriver driver){
+    public void closeBrowser(WebDriver driver)
+    {
         driver.quit();
     }
 
